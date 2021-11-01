@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/teal_200"
+    tools:context=".view.MainActivity">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="Sort by"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:background="@drawable/sort_by_background"/>
+
+    <HorizontalScrollView
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="5">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/sort_by_population_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Population"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/sort_button_background"
+                style="@style/SortButtons"/>
+
+            <Button
+                android:id="@+id/sort_by_area_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Area"
+                android:background="@drawable/sort_button_background"
+                style="@style/SortButtons"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Another"
+                android:background="@drawable/sort_button_background"
+                style="@style/SortButtons"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Another2"
+                android:background="@drawable/sort_button_background"
+                style="@style/SortButtons"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Another3"
+                android:background="@drawable/sort_button_background"
+                style="@style/SortButtons"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>
