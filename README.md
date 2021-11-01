@@ -7,4 +7,4 @@
 </ul>
 
 <h2>Screenshot</h2>
-<img src="./Screenshots/Screenshot_1635788388.png" alt="Initial Pic" width="400"/>
+<img src="screenshots/Screenshot_1635788388.png" alt="Initial Pic" width="400"/>
