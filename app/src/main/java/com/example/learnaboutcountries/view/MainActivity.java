@@ -1,7 +1,7 @@
 package com.example.learnaboutcountries.view;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,11 +14,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.learnaboutcountries.R;
-import com.example.learnaboutcountries.model.CountryModel;
 import com.example.learnaboutcountries.viewmodel.CountryListViewModel;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private TextView errorText;
@@ -30,15 +28,18 @@ public class MainActivity extends AppCompatActivity {
     private CountryListAdapter countryListAdapter = new CountryListAdapter(new ArrayList<>());
 
     //TODO: move to custom view, plz plz plz
-    private Button sortByPopulationButton;
-    private Button sortByAreaButton;
-    private boolean isPopulationDescending = true;
-    private boolean isAreaDescending = true;
+    private Button showPopulationButton;
+    private Button showAreaButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if(getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+            getSupportActionBar().setCustomView(R.layout.actionbar);
+        }
 
         swipeRefreshLayout = findViewById(R.id.swipe_refresh_layout);
         errorText = findViewById(R.id.counties_loading_error);
@@ -46,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
         countryRecyclerView = findViewById(R.id.countries_list_view);
 
         //TODO: move to custom view, plz plz plz
-        sortByPopulationButton = findViewById(R.id.sort_by_population_button);
-        sortByAreaButton = findViewById(R.id.sort_by_area_button);
+        showPopulationButton = findViewById(R.id.show_population_button);
+        showAreaButton = findViewById(R.id.show_area_button);
 
         countryListViewModel = new ViewModelProvider(this).get(CountryListViewModel.class);
 
@@ -58,14 +59,12 @@ public class MainActivity extends AppCompatActivity {
         countryRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         countryRecyclerView.setAdapter(countryListAdapter);
 
-        sortByPopulationButton.setOnClickListener(v -> {
-            countryListAdapter.sortByPopulation(isPopulationDescending);
-            isPopulationDescending = !isPopulationDescending;
+        showPopulationButton.setOnClickListener(v -> {
+            countryListAdapter.showPopulation();
         });
 
-        sortByAreaButton.setOnClickListener(v -> {
-            countryListAdapter.sortByArea(isAreaDescending);
-            isAreaDescending = !isAreaDescending;
+        showAreaButton.setOnClickListener(v -> {
+            countryListAdapter.showArea();
         });
 
         swipeRefreshLayout.setOnRefreshListener(() -> {

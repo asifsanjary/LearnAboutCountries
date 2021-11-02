@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:background="@color/teal_200"
+    android:layout_height="48dp"
+    android:background="@color/purple_200"
     tools:context=".view.MainActivity">
 
     <TextView
@@ -12,18 +12,20 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:paddingRight="5dp"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
-        android:text="Sort by"
-        android:textSize="14sp"
+        android:layout_marginRight="5dp"
+        android:text="Show"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center_vertical"
         android:background="@drawable/sort_by_background"/>
 
     <HorizontalScrollView
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="45dp"
         android:layout_gravity="center_vertical"
         android:layout_weight="5">
         <LinearLayout
@@ -32,42 +34,37 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/sort_by_population_button"
+                android:id="@+id/show_population_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Population"
                 android:layout_marginLeft="5dp"
                 android:background="@drawable/sort_button_background"
-                style="@style/SortButtons"/>
+                style="@style/ShowButtons"/>
 
             <Button
-                android:id="@+id/sort_by_area_button"
+                android:id="@+id/show_area_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Area"
                 android:background="@drawable/sort_button_background"
-                style="@style/SortButtons"/>
+                style="@style/ShowButtons"/>
 
             <Button
+                android:id="@+id/show_capital_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Another"
+                android:text="Capital"
                 android:background="@drawable/sort_button_background"
-                style="@style/SortButtons"/>
+                style="@style/ShowButtons"/>
 
             <Button
+                android:id="@+id/show_region_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Another2"
+                android:text="Region"
                 android:background="@drawable/sort_button_background"
-                style="@style/SortButtons"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Another3"
-                android:background="@drawable/sort_button_background"
-                style="@style/SortButtons"/>
+                style="@style/ShowButtons"/>
 
         </LinearLayout>
     </HorizontalScrollView>

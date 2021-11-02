@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:layout_marginBottom="2dp"
+    android:background="#ffffff">
 
     <ImageView
         android:id="@+id/country_flag_image"
@@ -26,10 +28,17 @@
             style="@style/Title"/>
 
         <TextView
-            android:id="@+id/capital_name_view"
+            android:id="@+id/second_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="capital"
+            android:text="2nd Text"
+            style="@style/Text"/>
+
+        <TextView
+            android:id="@+id/third_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3rd Text"
             style="@style/Text"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>

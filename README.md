@@ -3,6 +3,18 @@
 <hr>
 <h2>Todos</h2>
 <ul>
+  <li><del>Sort</del> <ins>Show Columns</ins> Functionality - UI Improvement</li>
+  <ul>
+    <li>When user selects a field on Show-bar, it will be showed on the countries-list view</li>
+    <li>Add Up-Down arrow somewhere to showcase the sorting in decreasing/increasing</li>
+  </ul>
+  <li>Fetch and Save and Periodically check for updates</li>
+    <ul>
+      <li>Choose a stable API for updated country data if possible</li>
+      <li>Use room-db for database</li>
+      <li>Add Periodic Update logic</li>
+    </ul>
+  <li>Add search option</li>
   <li>Lots of Todos (Just started)</li>
 </ul>
 
