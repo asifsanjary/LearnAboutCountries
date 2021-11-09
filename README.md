@@ -1,4 +1,4 @@
-<h1>Learn about Countries (Just started - Need some weeks)</h1>
+<h1>Learn about Countries [Development Stopped. Contributing elsewhere]</h1>
 <h2>Android App - refreshing my Android Skills and also showcasing</h2>
 <hr>
 <h2>Todos</h2>
